@@ -192,7 +192,7 @@ export const siteConfig: SiteConfig = {
 			fontFamily: "EarlySummerSerif",
 			fontWeight: "500",
 			localFonts: ["EarlySummerSerif-Medium.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			enableCompress: false, // 启用字体子集优化，减少字体文件大小
 		},
 
 	},
