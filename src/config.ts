@@ -94,7 +94,7 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/001.webp",
+				"https://inkem-1306784622.cos.accelerate.myqcloud.com/blog/pic/001.webp",
 				// "/assets/desktop-banner/02.webp",
 				// "/assets/desktop-banner/03.webp",
 				// "/assets/desktop-banner/04.webp",
@@ -106,7 +106,7 @@ export const siteConfig: SiteConfig = {
 				// "/assets/mobile-banner/02.webp",
 				// "/assets/mobile-banner/03.webp",
 				// "/assets/mobile-banner/04.webp",
-				"/assets/mobile-banner/005.webp",
+				"https://inkem-1306784622.cos.accelerate.myqcloud.com/blog/pic/005.webp",
 				// "/assets/mobile-banner/06.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
