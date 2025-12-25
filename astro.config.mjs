@@ -26,107 +26,101 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import vercel from "@astrojs/vercel";
+import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://inkem.space',
   base: "/",
   trailingSlash: "always",
 
-  integrations: [
-      tailwind({
-          nesting: true,
-      }),
-      swup({
-          theme: false,
-          animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
-          // the default value `transition-` cause transition delay
-          // when the Tailwind class `transition-all` is used
-          containers: ["main"],
-          smoothScrolling: false, // 禁用平滑滚动以提升性能，避免与锚点导航冲突
-          cache: true,
-          preload: false, // 禁用预加载以减少网络请求
-          accessibility: true,
-          updateHead: true,
-          updateBodyClass: false,
-          globalInstance: true,
-          // 滚动相关配置优化
-          resolveUrl: (url) => url,
-          animateHistoryBrowsing: false,
-          skipPopStateHandling: (event) => {
-              // 跳过锚点链接的处理，让浏览器原生处理
-              return event.state && event.state.url && event.state.url.includes("#");
-          },
-      }),
-      icon({
-          include: {
-              "preprocess: vitePreprocess(),": ["*"],
-              "fa6-brands": ["*"],
-              "fa6-regular": ["*"],
-              "fa6-solid": ["*"],
-              mdi: ["*"],
-              "simple-icons": ["*"],
-          },
-      }),
-      expressiveCode({
-          themes: ["github-light", "github-dark"],
-          plugins: [
-              pluginCollapsibleSections(),
-              pluginLineNumbers(),
-              pluginLanguageBadge(),
-              pluginCustomCopyButton(),
-          ],
-          defaultProps: {
-              wrap: true,
-              overridesByLang: {
-                  shellsession: {
-                      showLineNumbers: false,
-                  },
-                  bash: {
-                      frame: "code",
-                  },
-                  shell: {
-                      frame: "code",
-                  },
-                  sh: {
-                      frame: "code",
-                  },
-                  zsh: {
-                      frame: "code",
-                  },
+  integrations: [tailwind({
+      nesting: true,
+  }), swup({
+      theme: false,
+      animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
+      // the default value `transition-` cause transition delay
+      // when the Tailwind class `transition-all` is used
+      containers: ["main"],
+      smoothScrolling: false, // 禁用平滑滚动以提升性能，避免与锚点导航冲突
+      cache: true,
+      preload: false, // 禁用预加载以减少网络请求
+      accessibility: true,
+      updateHead: true,
+      updateBodyClass: false,
+      globalInstance: true,
+      // 滚动相关配置优化
+      resolveUrl: (url) => url,
+      animateHistoryBrowsing: false,
+      skipPopStateHandling: (event) => {
+          // 跳过锚点链接的处理，让浏览器原生处理
+          return event.state && event.state.url && event.state.url.includes("#");
+      },
+  }), icon({
+      include: {
+          "preprocess: vitePreprocess(),": ["*"],
+          "fa6-brands": ["*"],
+          "fa6-regular": ["*"],
+          "fa6-solid": ["*"],
+          mdi: ["*"],
+          "simple-icons": ["*"],
+      },
+  }), expressiveCode({
+      themes: ["github-light", "github-dark"],
+      plugins: [
+          pluginCollapsibleSections(),
+          pluginLineNumbers(),
+          pluginLanguageBadge(),
+          pluginCustomCopyButton(),
+      ],
+      defaultProps: {
+          wrap: true,
+          overridesByLang: {
+              shellsession: {
+                  showLineNumbers: false,
+              },
+              bash: {
+                  frame: "code",
+              },
+              shell: {
+                  frame: "code",
+              },
+              sh: {
+                  frame: "code",
+              },
+              zsh: {
+                  frame: "code",
               },
           },
-          styleOverrides: {
-              codeBackground: "var(--codeblock-bg)",
-              borderRadius: "0.75rem",
-              borderColor: "none",
-              codeFontSize: "0.875rem",
-              codeFontFamily:
-                  "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-              codeLineHeight: "1.5rem",
-              frames: {
-                  editorBackground: "var(--codeblock-bg)",
-                  terminalBackground: "var(--codeblock-bg)",
-                  terminalTitlebarBackground: "var(--codeblock-bg)",
-                  editorTabBarBackground: "var(--codeblock-bg)",
-                  editorActiveTabBackground: "none",
-                  editorActiveTabIndicatorBottomColor: "var(--primary)",
-                  editorActiveTabIndicatorTopColor: "none",
-                  editorTabBarBorderBottomColor: "var(--codeblock-bg)",
-                  terminalTitlebarBorderBottomColor: "none",
-              },
-              textMarkers: {
-                  delHue: 0,
-                  insHue: 180,
-                  markHue: 250,
-              },
-          },
+      },
+      styleOverrides: {
+          codeBackground: "var(--codeblock-bg)",
+          borderRadius: "0.75rem",
+          borderColor: "none",
+          codeFontSize: "0.875rem",
+          codeFontFamily:
+              "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+          codeLineHeight: "1.5rem",
           frames: {
-              showCopyToClipboardButton: false,
+              editorBackground: "var(--codeblock-bg)",
+              terminalBackground: "var(--codeblock-bg)",
+              terminalTitlebarBackground: "var(--codeblock-bg)",
+              editorTabBarBackground: "var(--codeblock-bg)",
+              editorActiveTabBackground: "none",
+              editorActiveTabIndicatorBottomColor: "var(--primary)",
+              editorActiveTabIndicatorTopColor: "none",
+              editorTabBarBorderBottomColor: "var(--codeblock-bg)",
+              terminalTitlebarBorderBottomColor: "none",
           },
-      }),
-      svelte(),
-      sitemap(),
-	],
+          textMarkers: {
+              delHue: 0,
+              insHue: 180,
+              markHue: 250,
+          },
+      },
+      frames: {
+          showCopyToClipboardButton: false,
+      },
+  }), svelte(), sitemap(), image()],
 
   markdown: {
       remarkPlugins: [
@@ -180,7 +174,7 @@ export default defineConfig({
               },
           ],
       ],
-	},
+    },
 
   vite: {
       build: {
@@ -197,7 +191,7 @@ export default defineConfig({
               },
           },
       },
-	},
+    },
 
   adapter: vercel(),
 });

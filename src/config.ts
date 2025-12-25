@@ -94,7 +94,7 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/01.webp",
+				"/assets/desktop-banner/001.webp",
 				// "/assets/desktop-banner/02.webp",
 				// "/assets/desktop-banner/03.webp",
 				// "/assets/desktop-banner/04.webp",
@@ -106,7 +106,7 @@ export const siteConfig: SiteConfig = {
 				// "/assets/mobile-banner/02.webp",
 				// "/assets/mobile-banner/03.webp",
 				// "/assets/mobile-banner/04.webp",
-				"/assets/mobile-banner/05.webp",
+				"/assets/mobile-banner/005.webp",
 				// "/assets/mobile-banner/06.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
@@ -169,7 +169,7 @@ export const siteConfig: SiteConfig = {
 		enable: true, // 启用目录功能
 		mode: "sidebar", // 目录显示模式："float" 悬浮按钮模式，"sidebar" 侧边栏模式
 		depth: 3, // 目录深度，1-6，1 表示只显示 h1 标题，2 表示显示 h1 和 h2 标题，依此类推
-		useJapaneseBadge: true, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
+		useJapaneseBadge: false, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
 	},
 	showCoverInContent: true, // 在文章内容页显示文章封面
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
