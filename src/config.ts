@@ -102,19 +102,19 @@ export const siteConfig: SiteConfig = {
 				// "/assets/desktop-banner/06.webp",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/01.webp",
-				"/assets/mobile-banner/02.webp",
-				"/assets/mobile-banner/03.webp",
-				"/assets/mobile-banner/04.webp",
+				// "/assets/mobile-banner/01.webp",
+				// "/assets/mobile-banner/02.webp",
+				// "/assets/mobile-banner/03.webp",
+				// "/assets/mobile-banner/04.webp",
 				"/assets/mobile-banner/05.webp",
-				"/assets/mobile-banner/06.webp",
+				// "/assets/mobile-banner/06.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
 
 		carousel: {
-			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
+			enable: false, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
 
 			interval: 10, // 轮播间隔时间（秒）
 		},
