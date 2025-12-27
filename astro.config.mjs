@@ -27,6 +27,7 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import vercel from "@astrojs/vercel";
 import image from "@astrojs/image";
+import pagefind from 'astro-pagefind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://inkem.space',
@@ -121,7 +122,16 @@ export default defineConfig({
       frames: {
           showCopyToClipboardButton: false,
       },
-  }), svelte(), sitemap(), image()],
+  }), 
+  pagefind({
+      buildDir: 'dist',
+      // 如果有特定元素标记搜索内容，使用这个配置
+      // pagefindOptions: {
+      //   bundleDirectory: '_pagefind',
+      //   force: true
+      // }
+    }),
+  svelte(), sitemap(), image()],
 
   markdown: {
       remarkPlugins: [
