@@ -20,6 +20,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://www.lapis.cafe",
 		tags: ["我关注的"],
 	},
+	{
+		id: 2,
+		title: "Eagle's Blog",
+		imgurl: "https://patchouli.group/images/avatar.png",
+		desc: "身无彩凤双飞翼，心有灵犀一点通。",
+		siteurl: "https://patchouli.group/",
+		tags: ["我的朋友"],
+	},
 ];
 
 // 获取所有友情链接数据
