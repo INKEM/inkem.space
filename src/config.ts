@@ -56,7 +56,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bangumi: {
-		userId: "1189644", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "inkem", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 	},
 
 	anime: {
