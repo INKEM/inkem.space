@@ -12,14 +12,14 @@ export interface FriendItem {
 
 // 友情链接数据
 export const friendsData: FriendItem[] = [
-	// {
-	// 	id: 1,
-	// 	title: "Astro",
-	// 	imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
-	// 	desc: "The web framework for content-driven websites",
-	// 	siteurl: "https://github.com/withastro/astro",
-	// 	tags: ["Framework"],
-	// },
+	{
+		id: 1,
+		title: "时歌的博客",
+		imgurl: "https://www.lapis.cafe/avatar.webp",
+		desc: "理解以真实为本，但真实本身并不会自动呈现",
+		siteurl: "https://www.lapis.cafe",
+		tags: ["我关注的"],
+	},
 ];
 
 // 获取所有友情链接数据
