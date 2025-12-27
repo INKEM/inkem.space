@@ -1,0 +1,10 @@
+{
+  "title": "我的诗歌集",
+  "description": "但是已经很少写诗了。",
+  "date": "2025-08-21",
+  "location": "大千世界",
+  "tags": ["诗歌", "作品"],
+  "layout": "masonry",
+  "columns": 3,
+  "hidden": false
+}

@@ -1,0 +1,10 @@
+{
+  "title": "我的画集",
+  "description": "但是已经不画了。",
+  "date": "2024-10-22",
+  "location": "画世界pro",
+  "tags": ["绘画", "作品"],
+  "layout": "masonry",
+  "columns": 3,
+  "hidden": false
+}
