@@ -32,6 +32,7 @@ export default defineConfig({
   site: 'https://inkem.space',
   base: "/",
   trailingSlash: "always",
+  output: "static",
 
   integrations: [tailwind({
       nesting: true,
