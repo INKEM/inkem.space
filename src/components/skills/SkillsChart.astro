@@ -60,6 +60,9 @@ interface Props {
 			backend: number;
 			database: number;
 			tools: number;
+			hardware: number;
+			sport: number;
+			art: number;
 			other: number;
 		};
 	};
@@ -80,10 +83,13 @@ const levelColors = {
 };
 
 const categoryColors = {
-	frontend: "#3B82F6", // blue-500
-	backend: "#8B5CF6", // violet-500
-	database: "#10B981", // emerald-500
+	// frontend: "#3B82F6", // blue-500
+	backend: "#10B981", // emerald-500
+	// database: "#10B981", // emerald-500
 	tools: "#F59E0B", // amber-500
+  hardware: "#EF7C00", // orange-600
+  sport: "#6366F1", // indigo-500
+  art: "#8B5CF6", // violet-500
 	other: "#EC4899", // pink-500
 };
 
@@ -113,26 +119,41 @@ const levelData = [
 
 // 计算矩形图数据（按技能分类）
 const categoryData = [
-	{
-		name: i18n(I18nKey.skillsFrontend),
-		value: stats.byCategory.frontend,
-		color: categoryColors.frontend,
-	},
+	// {
+	// 	name: i18n(I18nKey.skillsFrontend),
+	// 	value: stats.byCategory.frontend,
+	// 	color: categoryColors.frontend,
+	// },
 	{
 		name: i18n(I18nKey.skillsBackend),
 		value: stats.byCategory.backend,
 		color: categoryColors.backend,
 	},
-	{
-		name: i18n(I18nKey.skillsDatabase),
-		value: stats.byCategory.database,
-		color: categoryColors.database,
-	},
+	// {
+	// 	name: i18n(I18nKey.skillsDatabase),
+	// 	value: stats.byCategory.database,
+	// 	color: categoryColors.database,
+	// },
 	{
 		name: i18n(I18nKey.skillsTools),
 		value: stats.byCategory.tools,
 		color: categoryColors.tools,
 	},
+  {
+    name: i18n(I18nKey.skillsSport),
+    value: stats.byCategory.sport,
+    color: categoryColors.sport,
+  },
+  {
+    name: i18n(I18nKey.skillsHardware),
+    value: stats.byCategory.hardware,
+    color: categoryColors.hardware,
+  },
+  {
+    name: i18n(I18nKey.skillsArt),
+    value: stats.byCategory.art,
+    color: categoryColors.art,
+  },
 	{
 		name: i18n(I18nKey.skillsOther),
 		value: stats.byCategory.other,
