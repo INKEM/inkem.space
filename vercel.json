@@ -35,5 +35,12 @@
 			]
 		}
 	],
-	"cleanUrls": true
+	"cleanUrls": true,
+
+	"rewrites": [
+		{
+			"source": "/pagefind/:path*",
+			"destination": "/pagefind/:path*"
+		}
+	]
 }
