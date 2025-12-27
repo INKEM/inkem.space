@@ -136,7 +136,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "我是一杯为品", // 主页横幅主标题
+			title: "www.inkem.space", // 主页横幅主标题
 
 			subtitle: [
 				"我预见自己终将死于一场理想主义 望着月光坠落在我颓圮的废墟上",
