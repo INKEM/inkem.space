@@ -126,10 +126,11 @@ export default defineConfig({
   pagefind({
       buildDir: 'dist',
       // 如果有特定元素标记搜索内容，使用这个配置
-      // pagefindOptions: {
-      //   bundleDirectory: '_pagefind',
-      //   force: true
-      // }
+      pagefindOptions: {
+        bundleDirectory: 'pagefind',
+        basePath: '/',
+        verbose: true      
+    }
     }),
   svelte(), sitemap(), image()],
 
