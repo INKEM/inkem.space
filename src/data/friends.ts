@@ -23,7 +23,7 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 2,
 		title: "Eagle's Blog",
-		imgurl: "https://patchouli.group/images/avatar.png",
+		imgurl: "https://patchouli.group/_astro/avatar.CJBAIyXG_cmwQ1.webp",
 		desc: "身无彩凤双飞翼，心有灵犀一点通。",
 		siteurl: "https://patchouli.group/",
 		tags: ["我的朋友"],
