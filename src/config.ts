@@ -670,5 +670,6 @@ export const umamiConfig = {
 	apiKey: import.meta.env.UMAMI_API_KEY || "api_HBQENsZPKiL6QB1MreTD3ShOkzctQEjA", // API密钥优先从环境变量读取，否则使用配置文件中的值
 	baseUrl: "https://api.umami.is", // Umami Cloud API地址
 	scripts: `
-<script defer src="https://cloud.umami.is/script.js" data-website-id="2336e06b-0952-4662-94be-7a28de5e7b4e"></script>  `.trim(), // 上面填你要插入的Script,不用再去Layout中插入
+<script defer src="https://cloud.umami.is/script.js" data-website-id="2336e06b-0952-4662-94be-7a28de5e7b4e"></script>
+`.trim(), // 上面填你要插入的Script,不用再去Layout中插入
 } as const;
