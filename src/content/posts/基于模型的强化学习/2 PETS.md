@@ -135,7 +135,7 @@ $$
 1. 从当前分布$q_{\theta^{(i)}}$中独立采样$K$个动作序列：$$\tau^{(j)}\sim q_{\theta^{(i)}}(\cdot),\quad j=1,\cdots,K$$
 2. 对每个序列计算其期望收益$J(\tau^{(j)})$（计算方法见下一小节）；
 3. 将动作序列按收益降序排列，选择前$M$个作为精英样本$\mathcal E$；
-4. 用精英样本的统计量更新分布参数：$$\begin{split}\mu_k^{(i+1)}=\frac1M\sum_{\tau\in\mathcal E}a_k^{(\tau)}\\\sigma_k^{(i+1)}=\sqrt{\frac1M\sum_{\tau\in\mathcal E}(a_k^{(\tau)}-\mu_k^{(i+1)})^2}\end{split}$$通常还会使用软更新$$\theta^{(i+1)}=\alpha\theta^{(i)}+(1-\alpha)\theta_{\mathrm{new}}$$
+4. 用精英样本的统计量更新分布参数：$$\begin{split}\mu_k^{(i+1)}&=\frac1M\sum_{\tau\in\mathcal E}a_k^{(\tau)}\\ \sigma_k^{(i+1)}&=\sqrt{\frac1M\sum_{\tau\in\mathcal E}(a_k^{(\tau)}-\mu_k^{(i+1)})^2}\end{split}$$通常还会使用软更新$$\theta^{(i+1)}=\alpha\theta^{(i)}+(1-\alpha)\theta_{\mathrm{new}}$$
 5. 重复上述过程直到达到预设迭代次数或参数收敛。
 
 ### 轨迹采样
