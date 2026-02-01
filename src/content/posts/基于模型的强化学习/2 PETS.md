@@ -135,7 +135,14 @@ $$
 1. 从当前分布$q_{\theta^{(i)}}$中独立采样$K$个动作序列：$$\tau^{(j)}\sim q_{\theta^{(i)}}(\cdot),\quad j=1,\cdots,K$$
 2. 对每个序列计算其期望收益$J(\tau^{(j)})$（计算方法见下一小节）；
 3. 将动作序列按收益降序排列，选择前$M$个作为精英样本$\mathcal E$；
-4. 用精英样本的统计量更新分布参数：$$\mu_k^{(i+1)}=\frac1M\sum_{\tau\in\mathcal E}a_k^{(\tau)},\sigma_k^{(i+1)}=\sqrt{\frac1M\sum_{\tau\in\mathcal E}(a_k^{(\tau)}-\mu_k^{(i+1)})^2}$$通常还会使用软更新$$\theta^{(i+1)}=\alpha\theta^{(i)}+(1-\alpha)\theta_{\mathrm{new}}$$
+4. 用精英样本的统计量更新分布参数：
+$$
+\mu_k^{(i+1)}=\frac1M\sum_{\tau\in\mathcal E}a_k^{(\tau)},\sigma_k^{(i+1)}=\sqrt{\frac1M\sum_{\tau\in\mathcal E}(a_k^{(\tau)}-\mu_k^{(i+1)})^2}
+$$
+通常还会使用软更新
+$$
+\theta^{(i+1)}=\alpha\theta^{(i)}+(1-\alpha)\theta_{\mathrm{new}}
+$$
 5. 重复上述过程直到达到预设迭代次数或参数收敛。
 
 ### 轨迹采样
@@ -209,7 +216,10 @@ PETS的规划器工作在标准的**模型预测控制**（Model predictive cont
 		1. 从CEM分布采样$N$次动作序列$a_{t:t+T}\sim CEM(\cdot)$；
 		2. 对每个动作序列$a_{t:t+T}$循环：
 			1. 从$p=0$到$P$，使用TS1和$\tilde f$传播状态粒子$s^p_\tau$；
-			2. 评估动作序列（论文省略了折扣因子）$$\sum^{t+T}_{\tau=t}\frac1P\sum^P_{p=1}r(s^p_\tau,a_\tau)$$
+			2. 评估动作序列（论文省略了折扣因子）
+$$
+\sum^{t+T}_{\tau=t}\frac1P\sum^P_{p=1}r(s^p_\tau,a_\tau)
+$$
 			3. 更新CEM分布。
 		3. 从最优动作序列$a_{t:t+T}^*$中选择第一个动作$a_t^*$执行；
 		4. 将观测到的数据$\{s_t,a_t^*,s_{t+1}\}$放入$\mathbb D$。
