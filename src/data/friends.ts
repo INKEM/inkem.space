@@ -28,6 +28,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://patchouli.group/",
 		tags: ["我的朋友"],
 	},
+	{
+		id: 3,
+		title: "人言兑",
+		imgurl: "https://pic.rmb.bdstatic.com/bjh/3eacca401b/250205/c9fae3c96b0da42d4d5a2a5ebcf8a1c8.png?x-bce-process=image/resize,m_lfit,w_1242",
+		desc: "人言成信 言兑才说",
+		siteurl: "https://blog.axiaoxin.com/",
+		tags: ["我关注的"],
+	},
 ];
 
 // 获取所有友情链接数据
