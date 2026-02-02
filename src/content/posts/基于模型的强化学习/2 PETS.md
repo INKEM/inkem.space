@@ -217,9 +217,9 @@ PETS的规划器工作在标准的**模型预测控制**（Model predictive cont
 		2. 对每个动作序列$a_{t:t+T}$循环：
 			1. 从$p=0$到$P$，使用TS1和$\tilde f$传播状态粒子$s^p_\tau$；
 			2. 评估动作序列（论文省略了折扣因子）
-$$
-\sum^{t+T}_{\tau=t}\frac1P\sum^P_{p=1}r(s^p_\tau,a_\tau)
-$$
+			$$
+			\sum^{t+T}_{\tau=t}\frac1P\sum^P_{p=1}r(s^p_\tau,a_\tau)
+			$$
 			3. 更新CEM分布。
 		3. 从最优动作序列$a_{t:t+T}^*$中选择第一个动作$a_t^*$执行；
 		4. 将观测到的数据$\{s_t,a_t^*,s_{t+1}\}$放入$\mathbb D$。
