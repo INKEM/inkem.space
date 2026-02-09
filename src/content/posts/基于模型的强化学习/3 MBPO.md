@@ -43,7 +43,7 @@ $$
 \eta[\pi]\geq\hat\eta[\pi]-C\geq(\hat\eta[\pi_D]+C)-C=\hat\eta[\pi_D]\approx\eta[\pi_D]
 $$
 
-末尾的$\hat\eta[\pi_0]\approx\eta[\pi_0]$基于一个合理假设：模型上一步是在$\pi_0$的状态分布上训练的，所以在$\pi_0$上的预测应该相对准确。
+末尾的$\hat\eta[\pi_D]\approx\eta[\pi_D]$基于一个合理假设：模型上一步是在$\pi_D$的状态分布上训练的，所以在$\pi_D$上的预测应该相对准确。
 
 现在，设计模型的关键便是对真实回报和模型回报之间的差距最大值，即模型的**性能差距上界**（Performance Bound）$C$进行量化。MBPO指出，$C$可以用模型的两个误差来表示
 
