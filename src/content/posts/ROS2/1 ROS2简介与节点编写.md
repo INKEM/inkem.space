@@ -1,5 +1,5 @@
 ---
-title: 【ROS2】#1 ROS2简介与节点编写
+title: 【ROS2】#1 机器人操作系统简介与节点编写
 published: 2026-03-15
 description: ROS2是用于构建机器人应用程序的一套软件库和工具集。
 tags: [ROS2, 节点, rclcpp, rclpy]
